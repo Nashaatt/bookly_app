@@ -2,6 +2,7 @@ import 'package:bookly_app/core/ulties/assets.dart';
 import 'package:bookly_app/features/Home/presentation/views/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({Key? key}) : super(key: key);
@@ -71,7 +72,9 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
   // navigate to home screen
   void navigateHomeScreen(){
     Future.delayed(const Duration(seconds: 3) , () {
-      Get.to(() => HomeView() , transition: Transition.fadeIn , duration: Duration(milliseconds: 250));
+      // Get.to(() => HomeView() , transition: Transition.fadeIn , duration: Duration(milliseconds: 250));
+
+      GoRouter.of(context).push('/homeView');
     },);
   }
 }
