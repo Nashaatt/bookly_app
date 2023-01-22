@@ -1,5 +1,7 @@
 import 'package:bookly_app/core/ulties/assets.dart';
+import 'package:bookly_app/features/Home/presentation/views/home_view.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({Key? key}) : super(key: key);
@@ -15,21 +17,9 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
 
   @override
   void initState() {
-    animationController = AnimationController(
-        vsync: this ,
-        duration: const Duration(
-        seconds: 1,
-    ));
 
-    slidingAnimation =
-        Tween<Offset>(begin: Offset(0,10) , end: Offset.zero).animate(animationController);
-
-    animationController.forward();
-    slidingAnimation.addListener(() {
-      setState(() {
-
-      });
-    });
+    initSlidingAnimation();
+    navigateHomeScreen();
   }
 
   @override
@@ -56,5 +46,32 @@ class _SplashViewBodyState extends State<SplashViewBody> with SingleTickerProvid
            ],
          ),
     );
+  }
+
+  // init Sliding Animation
+  void initSlidingAnimation(){
+    animationController = AnimationController(
+        vsync: this ,
+        duration: const Duration(
+          seconds: 1,
+        ));
+
+    slidingAnimation =
+        Tween<Offset>(begin: Offset(0,10) , end: Offset.zero).animate(animationController);
+
+    animationController.forward();
+    slidingAnimation.addListener(() {
+      setState(() {
+
+      });
+    });
+  }
+
+
+  // navigate to home screen
+  void navigateHomeScreen(){
+    Future.delayed(const Duration(seconds: 3) , () {
+      Get.to(() => HomeView() , transition: Transition.fadeIn , duration: Duration(milliseconds: 250));
+    },);
   }
 }
