@@ -48,7 +48,9 @@ class BestSellerWidget extends StatelessWidget {
                   children: const [
                     Text('19.99\$'  , style: Styles.textStyle20,),
                     SizedBox(width: 60.0,),
-                    RowRatingWidget(),
+                    RowRatingWidget(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                    ),
                   ],
                 )
               ],
