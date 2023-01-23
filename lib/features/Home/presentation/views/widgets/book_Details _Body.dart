@@ -1,4 +1,5 @@
 import 'package:bookly_app/core/ulties/assets.dart';
+import 'package:bookly_app/core/ulties/router.dart';
 import 'package:bookly_app/core/ulties/styles.dart';
 import 'package:bookly_app/features/Home/presentation/views/widgets/book_rating.dart';
 import 'package:bookly_app/features/Home/presentation/views/widgets/custom_book_deta_bar.dart';

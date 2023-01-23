@@ -2,7 +2,6 @@ import 'package:bookly_app/core/ulties/assets.dart';
 import 'package:bookly_app/features/Home/presentation/views/widgets/custom_listview_item.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
 import '../../../../../core/ulties/styles.dart';
 import 'bestSeller_listview.dart';
 import 'bestSeller_listview_item.dart';
@@ -21,7 +20,7 @@ class HomeViewBody extends StatelessWidget {
            children: [
              // Custom AppBar
              const CustomAppBar(),
-             // Horzeintal ListView
+             // Horizontal ListView
              SizedBox(
                height: 300.0,
                child: ListView.builder(
