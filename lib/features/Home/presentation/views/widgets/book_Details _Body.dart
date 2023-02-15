@@ -24,10 +24,10 @@ class BookDetailsBody extends StatelessWidget {
               children: [
                 CustomBookAppBar(),
                 Padding(
-                  padding: EdgeInsets.symmetric(horizontal: width * 0.17),
+                  padding: EdgeInsets.symmetric(horizontal: width * 0.25),
                   child: Image.asset(Assets.itemImg),
                 ),
-                SizedBox(height: 20.0,),
+                SizedBox(height: 5.0,),
                 Text(
                   'The Jungle Book',
                   style: Styles.textStyle30.copyWith(fontFamily: 'Kavoon'),
@@ -53,7 +53,6 @@ class BookDetailsBody extends StatelessWidget {
                 ),
                 SizedBox(height: 20.0,),
                 SimillerListView(),
-                SizedBox(height: 40.0,),
               ],
             ),
           ),
