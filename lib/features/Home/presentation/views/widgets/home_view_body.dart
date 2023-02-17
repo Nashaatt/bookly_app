@@ -6,6 +6,7 @@ import '../../../../../core/ulties/styles.dart';
 import 'bestSeller_listview.dart';
 import 'bestSeller_listview_item.dart';
 import 'custom_appbar.dart';
+import 'feturedBooksLstView.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({Key? key}) : super(key: key);
@@ -21,14 +22,7 @@ class HomeViewBody extends StatelessWidget {
              // Custom AppBar
              const CustomAppBar(),
              // Horizontal ListView
-             SizedBox(
-               height: 300.0,
-               child: ListView.builder(
-                 scrollDirection: Axis.horizontal,
-                 itemBuilder: (context , index) => const CustomListViewItem(),
-                 itemCount: 10,
-               ),
-             ),
+             FeturedBooksListView(),
              // Best Seller Text
              const Text(
                  'Best Seller',
